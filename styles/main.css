@@ -1,0 +1,76 @@
+/* ========== Reset ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ========== Custom properties ========== */
+:root { --accent-color: #800000; /* #800 also works */ }
+
+/* ========== Defaults ========== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid var(--accent-color);
+  background: #fff;
+}
+h1, h2, h3, p, ul { padding: .5em 0; }
+ul { margin-left: 2em; }
+
+a:hover, a:focus { font-style: italic; color: var(--accent-color); }
+
+/* ========== Header ========== */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 2px solid var(--accent-color);
+  /* Linear gradient background (30deg) */
+  background: linear-gradient(30deg, #f6bb73 0%, #ffffff 30%, #ffffff 65%, #f6bb73 100%);
+}
+header img { margin: .75em 1em; } /* top/bottom .75em, left/right 1em */
+header h2 { padding-bottom: 0; }
+header h3 { padding-bottom: 1em; }
+.large { font-size: 125%; }
+
+/* ========== Main ========== */
+main {
+  padding: 0 1em 1em; /* right, left, bottom */
+  clear: left;
+}
+/* Top & bottom borders on the first <h1> in <main> */
+main > h1:first-of-type {
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+/* Optional extra credit: words in a rounded box */
+.pill {
+  display: inline-block;
+  padding: .25em .75em;
+  border: 2px solid var(--accent-color);
+  border-radius: 9999px;
+  background: #fffbe6;
+}
+
+/* Style speaker images */
+main img {
+  border: 4px double var(--accent-color);
+  border-radius: 12px;
+  margin: .25em 0 1em 0;
+}
+
+/* Blockquote emphasis */
+blockquote {
+  font-style: italic;
+  padding: .5em 1em;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: var(--accent-color);
+}
+footer p {
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0; /* top & bottom 1em */
+}
